@@ -14,6 +14,14 @@ A small, tested `.claude/` directory for [Claude Code](https://code.claude.com/d
 
 ## Install
 
+**As a plugin (one line, Claude Code 2.1.275+):**
+
+```text
+/plugin install agent-runbook-starter --marketplace theagentrunbook/claude-code-starter
+```
+
+**Or copy the files into your repo:**
+
 ```bash
 # from your repo root
 git clone https://github.com/theagentrunbook/claude-code-starter /tmp/ccs
