@@ -8,7 +8,7 @@ A small, tested `.claude/` directory for [Claude Code](https://code.claude.com/d
 |---|---|
 | `.claude/agents/reviewer.md` | A **read-only reviewer** subagent. Its `tools:` allowlist is `Read, Grep, Glob`, so it cannot edit your code even if asked. (Omit `tools` and a subagent inherits every tool, Edit and Bash included.) |
 | `.claude/agents/scout.md` | A **scout** on `model: haiku` for "where is X / what calls Y". It runs in its own context window, so search noise never reaches your main conversation. |
-| `.claude/hooks/guard.sh` | A **PreToolUse guard** that blocks destructive shell commands (`rm -rf` in any flag order, plain force-pushes, `mkfs`, raw `dd` to a disk) with exit code 2 and tells Claude *why*, so it changes course. It still allows `git push --force-with-lease`. |
+| `.claude/hooks/guard.sh` | A **PreToolUse guard** that blocks destructive shell commands (`rm -rf` in any flag order, plain force-pushes, `mkfs`, raw `dd` to a disk) with exit code 2 and tells Claude *why*, so it changes course. It still allows `git push --force-with-lease` to a feature branch. Tested against 30 bypass attempts; the ones a regex cannot close are listed in the test script as known gaps. |
 | `.claude/settings.json` | Wires the guard to `Bash` and `PowerShell` with `"onFailure": "block"`, so a crashing guard fails closed, not open. |
 | `scripts/test-guard.sh` | Feeds fake payloads into the guard and checks exit codes. No model call, no tokens. |
 
