@@ -1,1 +1,11 @@
-{"name":"agent-runbook-starter","version":"1.0.0","description":"A read-only reviewer subagent, a Haiku scout subagent, and a fail-closed PreToolUse guard that blocks destructive shell commands and tells Claude why.","author":{"name":"The Agent Runbook"},"homepage":"https://github.com/theagentrunbook/claude-code-starter","repository":"https://github.com/theagentrunbook/claude-code-starter","license":"MIT","keywords":["subagents","hooks","guardrails","code-review","safety"],"agents":["./.claude/agents/reviewer.md","./.claude/agents/scout.md"]}
+{
+  "name": "agent-runbook-starter",
+  "version": "1.1.0",
+  "description": "A read-only reviewer subagent, a Haiku scout subagent, and a fail-closed PreToolUse guard that blocks destructive shell commands and tells Claude why.",
+  "author": { "name": "The Agent Runbook" },
+  "homepage": "https://github.com/theagentrunbook/claude-code-starter",
+  "repository": "https://github.com/theagentrunbook/claude-code-starter",
+  "license": "MIT",
+  "keywords": ["subagents", "hooks", "guardrails", "code-review", "safety"],
+  "agents": ["./.claude/agents/reviewer.md", "./.claude/agents/scout.md"]
+}
