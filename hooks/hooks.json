@@ -1,1 +1,18 @@
-{"description":"Agent Runbook guard: blocks destructive shell commands (exit 2 with a reason), allows --force-with-lease.","hooks":{"PreToolUse":[{"matcher":"Bash|PowerShell","hooks":[{"type":"command","command":"bash \"${CLAUDE_PLUGIN_ROOT}/.claude/hooks/guard.sh\"","timeout":30,"onFailure":"block"}]}]}}
+{
+  "description": "Agent Runbook guard: blocks destructive shell commands (exit 2 with a reason), allows --force-with-lease on feature branches.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/.claude/hooks/guard.sh\"",
+            "timeout": 30,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ]
+  }
+}
