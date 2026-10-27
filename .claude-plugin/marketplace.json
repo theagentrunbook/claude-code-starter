@@ -1,0 +1,1 @@
+{"name":"agent-runbook","owner":{"name":"The Agent Runbook"},"plugins":[{"name":"agent-runbook-starter","source":"./","description":"Read-only reviewer + Haiku scout subagents and a fail-closed destructive-command guard hook."}]}
